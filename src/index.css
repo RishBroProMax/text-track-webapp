@@ -1,0 +1,103 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar variables from original, ensure they align or are updated if sidebar is used */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 7%; /* Near black */
+    --foreground: 0 0% 98%; /* White */
+
+    --card: 0 0% 10%; /* Dark gray for cards */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 5%; /* Very dark for popovers */
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%; /* White for primary actions */
+    --primary-foreground: 0 0% 10%; /* Black for text on primary */
+
+    --secondary: 0 0% 15%; /* Dark gray for secondary elements */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 20%; /* Slightly lighter dark gray */
+    --muted-foreground: 0 0% 65%; /* Lighter gray for muted text */
+
+    --accent: 0 0% 20%; /* Similar to muted or a subtle light accent */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 70% 55%; /* Red, ensure contrast */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 25%; /* Dark border */
+    --input: 0 0% 12%; /* Dark input background */
+    --ring: 0 0% 80%; /* Lighter gray ring for focus */
+
+    --radius: 0.5rem;
+
+    /* Dark Sidebar variables */
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Added for smoother font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
